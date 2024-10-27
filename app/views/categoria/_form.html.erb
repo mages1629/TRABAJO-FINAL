@@ -1,0 +1,47 @@
+<%= form_with(model: categorium) do |form| %>
+  <% if categorium.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(categorium.errors.count, "error") %> prohibited this categorium from being saved:</h2>
+
+      <ul>
+        <% categorium.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nombre, style: "display: block" %>
+    <%= form.text_field :nombre %>
+  </div>
+
+  <div>
+    <%= form.label :descripcion, style: "display: block" %>
+    <%= form.text_field :descripcion %>
+  </div>
+
+  <div>
+    <%= form.label :estatus, style: "display: block" %>
+    <%= form.check_box :estatus %>
+  </div>
+
+  <div>
+    <%= form.label :fecha_creacion, style: "display: block" %>
+    <%= form.date_field :fecha_creacion %>
+  </div>
+
+  <div>
+    <%= form.label :autor_id, style: "display: block" %>
+    <%= form.number_field :autor_id %>
+  </div>
+
+  <div>
+    <%= form.label :slug, style: "display: block" %>
+    <%= form.text_field :slug %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

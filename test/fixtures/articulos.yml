@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  titulo: MyString
+  contenido: MyText
+  usuario_id: 1
+  categoria_id: 1
+  fecha_creacion: 2024-10-26
+  publicado: false
+
+two:
+  titulo: MyString
+  contenido: MyText
+  usuario_id: 1
+  categoria_id: 1
+  fecha_creacion: 2024-10-26
+  publicado: false
